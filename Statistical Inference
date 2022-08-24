@@ -1,0 +1,23 @@
+#second exercise on statistical inference
+
+peso=c(21.50,18.95,18.55,19.40,19.15,22.35,22.90,22.20,23.10)
+
+n<-(length(peso))
+x.barra=sum(peso)/n
+varianza<-sum((peso-x.barra)^2)/(n-1)
+desviacion<-sqrt(varianza)
+sd(peso) #second way
+
+v=n-1 #GRADOS DE LIVERTAD 
+alpha=0.05
+cuantil=qt(alpha/2,df=v,lower.tail = FALSE)
+
+margen.error=cuantil*(desviacion/sqrt(n))
+
+limite.inferior=x.barra-margen.error
+limite.superior=x.barra+margen.error
+
+interval<- data.frame(n,media,desviacion,limite.inferior,limite.superior)
+interval
+
+c(limite.inferior,limite.superior)
