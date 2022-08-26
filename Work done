@@ -1,0 +1,72 @@
+
+#First exercise
+n=25
+estimacion.media=390
+sigma=sqrt(400)
+alpha=0.05
+cuantil=qnorm(alpha/2,mean =0,sd=1,lower.tail = FALSE)
+cuantil
+margen.error=cuantil*(sigma/sqrt(n))
+margen.error
+limite.inferior=estimacion.media+margen.error
+limite.superior=estimacion.media-margen.error
+interval<- data.frame(n,media,desviacion,limite.inferior,limite.superior)
+interval
+c(limite.inferior,limite.superior)
+
+
+
+
+#Second exercise
+n=9
+estimacion.media=35
+sigma=3.04
+alpha=0.02
+cuantil=qnorm(alpha/2,mean =0,sd=1,lower.tail = FALSE)
+cuantil
+margen.error=cuantil*(sigma/sqrt(n))
+margen.error
+limite.inferior=estimacion.media+margen.error
+limite.superior=estimacion.media-margen.error
+interval<- data.frame(n,media,desviacion,limite.inferior,limite.superior)
+interval
+c(limite.inferior,limite.superior)
+
+
+
+
+#Third year
+n=50
+estimacion.media=4000
+sigma=800
+alpha=0.10
+cuantil=qnorm(alpha/2,mean =0,sd=1,lower.tail = FALSE)
+cuantil
+margen.error=cuantil*(sigma/sqrt(n))
+margen.error
+limite.inferior=estimacion.media+margen.error
+limite.superior=estimacion.media-margen.error
+interval<- data.frame(n,media,desviacion,limite.inferior,limite.superior)
+interval
+c(limite.inferior,limite.superior)
+
+
+
+
+#Fourth exercise
+n=49
+estimacion.media=12
+sigma=2
+alpha=0.05
+cuantil=qnorm(alpha/2,mean =0,sd=1,lower.tail = FALSE)
+cuantil
+margen.error=cuantil*(sigma/sqrt(n))
+margen.error
+limite.inferior=estimacion.media+margen.error
+limite.superior=estimacion.media-margen.error
+interval<- data.frame(n,media,desviacion,limite.inferior,limite.superior)
+interval
+c(limite.inferior,limite.superior)
+
+
+
