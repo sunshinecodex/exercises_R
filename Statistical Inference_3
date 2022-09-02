@@ -1,0 +1,120 @@
+#Primer ejercicio
+# ic para la varianza
+n=20 #tamaño muestra
+varianza=16 #varianza muestral
+alpha=0.02
+a=qchisq(1-alpha/2,df=n-1,lower.tail=FALSE)
+a
+b=qchisq(alpha/2,df=n-1,lower.tail = FALSE)
+b
+# Intervalo de confianza
+limite.inferior=((n-1)*varianza)/b
+limite.superior=((n-1)*varianza)/a
+c(limite.inferior,limite.superior)
+#conclusión: el 98% de las veces que calculemos
+# el IC de la varianza la variabilidad de las calificaciones estará entre 
+#(8.399909 39.828477).
+
+
+
+#Primer ejercicio
+# ic para la varianza
+n=20 #tamaño muestra
+varianza=16 #varianza muestral
+alpha=0.1
+a=qchisq(1-alpha/2,df=n-1,lower.tail=FALSE)
+a
+b=qchisq(alpha/2,df=n-1,lower.tail = FALSE)
+b
+# Intervalo de confianza
+limite.inferior=((n-1)*varianza)/b
+limite.superior=((n-1)*varianza)/a
+c(limite.inferior,limite.superior)
+#conclusión: el 98% de las veces que calculemos
+# el IC de la varianza la variabilidad de las calificaciones estará entre 
+#(10.08508 30.04839).
+
+
+
+#Primer ejercicio
+# ic para la varianza
+n=20 #tamaño muestra
+varianza=16 #varianza muestral
+alpha=0.05
+a=qchisq(1-alpha/2,df=n-1,lower.tail=FALSE)
+a
+b=qchisq(alpha/2,df=n-1,lower.tail = FALSE)
+b
+# Intervalo de confianza
+limite.inferior=((n-1)*varianza)/b
+limite.superior=((n-1)*varianza)/a
+c(limite.inferior,limite.superior)
+#conclusión: el 98% de las veces que calculemos
+# el IC de la varianza la variabilidad de las calificaciones estará entre 
+#(9.25353 34.13231).
+
+
+
+#segundo ejercicio
+# ic para la varianza
+tiempo= c(1.9,2.4,3.0,3.5,4.2)
+n= length(tiempo) #tamaño muestra
+n
+varianza=var(tiempo) #varianza muestral
+varianza
+alpha=0.05
+a=qchisq(1-alpha/2,df=n-1,lower.tail=FALSE)
+a
+b=qchisq(alpha/2,df=n-1,lower.tail = FALSE)
+b
+# Intervalo de confianza
+limite.inferior=((n-1)*varianza)/b
+limite.superior=((n-1)*varianza)/a
+c(limite.inferior,limite.superior)
+#conclusión: el 95% de las veces que calculemos
+# el IC de la varianza la variabilidad de los tiempos de duracion de la bateria 
+#estará entre (0.2925528,6.7297174).
+
+
+#Tercer ejercicio
+# ic para la varianza
+diametro= c(3.01,3.05,2.99,2.99,3.00,3.02,2.98,2.99,2.97,2.97,3.02,3.01)
+n= length(diametro) #tamaño muestra
+nvarianza=var(diametro) #varianza muestral
+varianza
+alpha=0.01
+a=qchisq(1-alpha/2,df=n-1,lower.tail=FALSE)
+a
+b=qchisq(alpha/2,df=n-1,lower.tail = FALSE)
+b
+# Intervalo de confianza
+limite.inferior=((n-1)*varianza)/b
+limite.superior=((n-1)*varianza)/a
+c(limite.inferior,limite.superior)
+#conclusión: el 99% de las veces que calculemos
+# el IC de la varianza la variabilidad de los diametros internos  
+#estará entre (0.0002242417 0.0023048362).
+
+
+
+#Tercer ejercicio
+# ic para la varianza
+diametro= c(3.01,3.05,2.99,2.99,3.00,3.02,2.98,2.99,2.97,2.97,3.02,3.01)
+n= length(diametro) #tamaño muestra
+n
+varianza=var(diametro) #varianza muestral
+varianza
+alpha=0.05
+a=qchisq(1-alpha/2,df=n-1,lower.tail=FALSE)
+a
+b=qchisq(alpha/2,df=n-1,lower.tail = FALSE)
+b
+# Intervalo de confianza
+limite.inferior=((n-1)*varianza)/b
+limite.superior=((n-1)*varianza)/a
+c(limite.inferior,limite.superior)
+#conclusión: el 95% de las veces que calculemos
+# el IC de la varianza la variabilidad de los diametros internos  
+#estará entre (0.000273722 0.001572431).
+
+
