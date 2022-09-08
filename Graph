@@ -1,0 +1,31 @@
+peso=(21.50,18.95,18.55,19.40,19.15,22.35,22.90,22.20,23.10)
+n = len(peso)
+import statistics
+media = statistics.mean(peso)
+desv = statistics.stdev(peso)
+print(n)
+print(media)
+print(desv)
+from scipy import stats
+t0_25 = stats.t(df = 7).ppf(0.975)
+print(t0_25)
+import math
+li = media - t0_25*(desv/math.sqrt(n))
+ls = media + t0_25*(desv/math.sqrt(n))
+print(li)
+print(ls)
+
+from scipy.stats.distributions import chi2
+import scipy.stats as ss
+import matplotlib.pyplot as plt
+import numpy as np
+from numpy import random
+import scipy.stats as stats
+df=100 ##Grados de libertad 
+chi2= stats.chi2(df)
+x=np.linspace(chi2.ppf(0.01),chi2.ppf(0.99),100)
+fp=chi2.pdf(x)   ## Funcion de Probabilidad 
+plt.plot(x,fp,"g")
+plt.title("Distribucion chi cuadrada")
+plt.ylabel("Probabilidad") 
+plt.xlabel("Cuantiles")
