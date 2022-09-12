@@ -1,0 +1,68 @@
+# Graficando Normal_001
+import scipy.stats as ss
+import matplotlib.pyplot as plt
+import numpy as np
+normal = ss.norm(17,20)
+x = np.linspace(normal.ppf(0.01),
+                normal.ppf(0.99), 100)
+fp = normal.pdf(x) # Función de Probabilidad
+plt.axvline(19.43517300958480)
+plt.axvline(22.36482699041519)
+plt.plot(x, fp)
+plt.title('Distribución Normal')
+plt.ylabel('probabilidad')
+plt.xlabel('valores')
+plt.show()
+
+
+
+
+#Grafica Normal_002
+# Graficando Normal
+import scipy.stats as ss
+import matplotlib.pyplot as plt
+import numpy as np
+from numpy import random
+import scipy.stats as stats
+superior= 19.43
+inferior= 22.36
+mu, sigma = (inferior-1.5),1 # media y desvio estandar
+normal = stats.norm(mu, sigma)
+x = np.linspace(normal.ppf(0.01),
+                normal.ppf(0.99), 100)
+plt.axvline(19.43517300958480)
+plt.axvline(22.36482699041519)
+
+fp = normal.pdf(x) # Función de Probabilidad
+plt.plot(x, fp)
+plt.title('Distribución Normal')
+plt.ylabel('probabilidad')
+plt.xlabel('valores')
+plt.show()
+
+
+
+# Graficando Normal 003
+import scipy.stats as ss
+import matplotlib.pyplot as plt
+import numpy as np
+from numpy import random
+import scipy.stats as stats
+from matplotlib import pyplot as plt
+superior= 19.43
+inferior= 22.36
+plt.plot(19.435,0, marker="o", color="red")
+plt.plot(22.36482,0, marker="o", color="red")
+mu, sigma = (inferior-1.5),1 # media y desvio estandar
+normal = stats.norm(mu, sigma)
+x = np.linspace(normal.ppf(0.01),
+                normal.ppf(0.99), 100)
+plt.axvline(19.43517300958480)
+plt.axvline(22.36482699041519)
+fp = normal.pdf(x) # Función de Probabilidad
+plt.plot(x, fp)
+plt.title('Distribución Normal')
+plt.ylabel('probabilidad')
+plt.xlabel('valores')
+
+plt.show()
